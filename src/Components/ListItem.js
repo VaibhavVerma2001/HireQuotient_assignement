@@ -5,8 +5,9 @@ import List from './List';
 
 function ListItem(props) {
 
-    const context = useContext(UserContext);
-    const { value } = context;
+    // const context = useContext(UserContext);
+    // const { value } = context;
+    const value = props.value;
     console.log("Values are : ", value);
     return (
         <div>

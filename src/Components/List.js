@@ -9,6 +9,7 @@ import CustomizedTables from './CustomizedTables';
 
 function List(props) {
     const { head, items } = props;
+    console.log("in list", items);
     return (
         <div  style={{marginTop : "10px"}} className='list'>
             <Accordion>
@@ -17,12 +18,17 @@ function List(props) {
                     aria-controls="panel1-content"
                     id="panel1-header"
                 >
-                    <Typography style={{color : "#477288", fontWeight:"bold"}}>{head}({items.length}) </Typography>
+                    <Typography style={{color : "#477288", fontWeight:"bold"}}>{head} () </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     {/* mui table */}
                     {/* No error if I comment this and uncomment once site reloads */}
-                    <CustomizedTables rows={items} />
+                    {items ? (
+                        <CustomizedTables rows={items} />
+                    ):(
+                        ""
+                    )}
+                    
                 </AccordionDetails>
             </Accordion>
         </div>
