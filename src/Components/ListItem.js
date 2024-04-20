@@ -5,10 +5,9 @@ import List from './List';
 
 function ListItem(props) {
 
-    // const context = useContext(UserContext);
-    // const { value } = context;
-    const value = props.value;
-    console.log("Values are : ", value);
+    const context = useContext(UserContext);
+    const { value } = context;
+    // console.log("Values are : ", value);
     return (
         <div>
             <List head = {"Fund"} items={value.Fund} />
