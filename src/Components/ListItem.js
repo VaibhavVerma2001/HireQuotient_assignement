@@ -10,6 +10,7 @@ function ListItem(props) {
     // console.log("Values are : ", value);
     return (
         <div>
+            <List head = {"Real Estate"} items={value["Real Estate"]} />
             <List head = {"Fund"} items={value.Fund} />
             <List head = {"Cash"} items={value.Cash} />
             <List head = {"Bond"} items={value.Bond} />
